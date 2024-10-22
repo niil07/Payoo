@@ -1,4 +1,4 @@
-// get the money and pin
+// Add money function
 
 document.getElementById('input-add-btn')
     .addEventListener('click', function(event){
@@ -17,6 +17,8 @@ document.getElementById('input-add-btn')
         document.getElementById('acc-balance').innerText = newBalance;
     })
 
+    // Cash Out Function
+
     document.getElementById('cashout-btn')
     .addEventListener('click', function(event){
         event.preventDefault();
@@ -34,3 +36,18 @@ document.getElementById('input-add-btn')
 
         document.getElementById('acc-balance').innerText = newBalance;
     })
+
+    // Toggle button 
+
+    document.getElementById('cash-out-form-show')
+        .addEventListener('click', function(){
+            document.getElementById('cashout-form').classList.remove('hidden');
+            document.getElementById('add-money-form').classList.add('hidden');
+        })
+
+    document.getElementById('add-money-form-show')
+        .addEventListener('click', function(){
+            document.getElementById('add-money-form').classList.remove('hidden');
+            document.getElementById('cashout-form').classList.add('hidden');
+        })
+
